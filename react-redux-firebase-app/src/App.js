@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-import { BrowserRouter, Switch, Route  } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard'
+import ProjectDetails from './components/projects/ProjectDetails'
+import SignIn from './components/authentication/SignIn'
+import SignUp from './components/authentication/SignUp'
+import CreateProject from './components/projects/CreateProject'
 
 class App extends Component {
   render() {
@@ -11,7 +14,11 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Switch>
-            <Route path='/' component={Dashboard} />
+            <Route exact path='/' component={Dashboard} />
+            <Route path='/project/:id' component={ProjectDetails} />
+            <Route path='/signin' component={SignIn} />
+            <Route path='/signup' component={SignUp} />
+            <Route path='/create' component={CreateProject} />
           </Switch>
 
         </div>
