@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { createProject } from '../../store/actions/projectActions'
 import { connect } from 'react-redux'
+import { createProject } from '../../store/actions/projectActions'
 
 class CreateProject extends Component {
     state = {
         title: '',
         content: ''
     }
-    handleCahnge = (e) => {
+    handleChange = (e) => {
         this.setState({
             [e.target.id]: e.target.value
         })
@@ -25,16 +25,16 @@ class CreateProject extends Component {
                     <h5 className="grey-text text-darken-3">Create Project</h5>
                     <div className="input-field">
                         <label htmlFor="title">Project Title</label>
-                        <input type="text" id="title" onChange={this.handleCahnge} />
+                        <input type="text" id="title" onChange={this.handleChange} />
                     </div>
 
                     <div className="input-field">
                         <label htmlFor="content">Project Content</label>
-                        <textarea id="content" className="materialize-textarea" onChange={this.handleCahnge} ></textarea>
+                        <textarea id="content" className="materialize-textarea" onChange={this.handleChange} ></textarea>
                     </div>
 
                     <div className="input-field">
-                        <button className="btn green lighten-1 z-dept-0" >Create</button>
+                        <button className="btn green lighten-1 z-depth-0" >Create</button>
                     </div>
                 </form>
             </div>
