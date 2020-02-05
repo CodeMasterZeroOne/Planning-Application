@@ -15,6 +15,9 @@ body {
 .listItem {
   background-color: powderblue;
 }
+.notifications {
+  background-color: darkseagreen;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
